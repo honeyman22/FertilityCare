@@ -1,6 +1,12 @@
-"use client";"use client";
+"use client";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import {
+  FaArrowUp,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+} from "react-icons/fa";
 
 export default function Footer() {
   const socialIcons = [
@@ -153,7 +159,7 @@ export default function Footer() {
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         className="fixed bottom-8 right-8 bg-primary-600 text-white p-4 rounded-full hover:bg-primary-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400"
       >
-        <i className="fas fa-arrow-up"></i>
+        <FaArrowUp />
       </button>
     </footer>
   );

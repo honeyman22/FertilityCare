@@ -55,6 +55,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "MedicalClinic",
+              name: "Main Fertility Care Center",
+              image: "https://www.fertilitycare.com/images/clinic1.jpg",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "123 Fertility Lane",
+                addressLocality: "New York",
+                addressRegion: "NY",
+                postalCode: "10001",
+              },
+              telephone: "+1 (555) 123-4567",
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: "40.712776",
+                longitude: "-74.005974",
+              },
+              url: "https://www.fertilitycare.com/contact-locations",
+              sameAs: [
+                "https://www.facebook.com/fertilitycare",
+                "https://www.twitter.com/fertilitycare",
+              ],
+            }),
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
